@@ -98,6 +98,8 @@ for i in classes:
            t = "Дифференцированный зачет"
         elif str(i[6])=="зач.":
            t = "Зачет"
+        else:
+            t = "Экзамен"
         if not any(d.get("globalExternalID") == globalID for d in arrGr):
             tempGr = {"teams_name": vpk_name, "subject": i[1], "name": grade, "subgroup": "1", "faculty": "000000080",
                   "externalID": str(int(i[2])), "globalExternalID": globalID, "teachers": snilsArr, "type": t, "students": studArr}
